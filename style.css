@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Readex+Pro:wght@600&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: url(img/canvas.png) no-repeat fixed;
+	background-size: cover;
+}
+
+header {
+	box-sizing: border-box;
+	position: fixed;
+	padding: 60px 60px;
+	top: 0;
+	width: 100%;
+	height: 320px;
+	font-family: 'Readex Pro', sans-serif;
+	font-size: 1.5em;
+}
+
+.container {
+	width: 25%;
+	min-width: 300px;
+	position: relative;
+	left: 65%;
+}
+
+.column {
+	width: 100%;
+	padding-top: 133.33%;
+	position: relative;
+}
+
+.hand {
+	display: flex;
+	width: 280px;
+	align-items: center;
+	position: absolute;
+	left: 65%;
+	margin-left: -135px;
+}
+
+.hand.top {
+	z-index: 999;
+}
+
+.hand img {
+	width: 100%;
+}
+
+.paperbag {
+	position: fixed;
+	bottom: -500px;
+	left: 65%;
+	margin-left: -225px;
+}
+
+.paperbag.top {
+	z-index: 999;
+}
+
+.imgwrap {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.imgwrap .hoverarea {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 300px;
+	z-index: 2;
+}
+
+.imgwrap .imgbox {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 1;
+	padding-top: 133.333%;
+	position: relative;
+	z-index: 1;
+}
+
+.imgwrap .imgbox.TP {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	border-radius: 10px;
+	transition: .2s;
+}
+
+.imgwrap .imgbox.TP.active {
+	width: 100%;
+	height: auto;
+}
+
+.imgwrap .imgbox img {
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 100%;
+	width: 5px;
+	background: url(./img/rope.png);
+	background-size: contain;
+	position: absolute;
+}
+
+.container .extrabar {
+	margin: 0 auto;
+	width: 5px;
+	height: 150px;
+	position: relative;
+	background: url(./img/rope.png);
+	background-size: contain;
+}
+
+.container .extrabar .circle {
+	position: absolute;
+	left: -8.29px;
+	width: 20px;
+	height: 20px;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+.container .extrabar:nth-of-type(5) {
+	margin-top: 50px;
+	height: 600px;
+}
+
+.container .extrabar:first-of-type .circle {
+	top: -15px;
+}
+
+.container .extrabar:last-of-type .circle {
+	bottom: -15px;
+}
+
+.container .extrabar:last-of-type {
+	margin-bottom: 50px;
+}
+
+.container .column:nth-of-type(7) .imgwrap {
+	left: 20px;
+}
+
+.container .column:nth-of-type(10) .imgwrap {
+	left: -50px;
+}
+
+.question {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	top: 30vh;
+	left: 60px;
+	width: 70%;
+	max-width: 850px;
+}
+.question #colon {
+	padding-top: 20px;
+	font-size: 14em;
+}
+.question .question-line {}
+
+.question .question-line .inner {
+	border: 2px solid black;
+	/* height: 100px; */
+	display: flex;
+	align-items: center;
+}
+
+.question .question-line .inner h2 {
+	font-size: 1.5em;
+	padding: 0 20px;
+}
+
+.question .question-line .inner .swiper {
+	flex-grow: 1;
+	height: 190px;
+	border-left: 2px solid black;
+}
+
+.swiper .swiper-wrapper {
+
+}
+.swiper .swiper-button {
+	position: absolute;
+	margin:0 auto;
+	left:0;
+	right:0;
+	color: #000;
+	transform: scale(1, 0.5) rotate(90deg);
+}
+.swiper .swiper-button-prev {
+	top:0px;
+
+}
+
+.swiper .swiper-button-next {
+	top:150px;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.swiper .swiper-wrapper .swiper-slide p {
+	font-size: 1.5em;
+}
