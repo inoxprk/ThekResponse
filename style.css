@@ -21,11 +21,19 @@ header {
 	font-size: 1.5em;
 }
 
+
 .container {
 	width: 25%;
 	min-width: 300px;
 	position: relative;
 	left: 65%;
+}
+
+#scrolldown {
+	position: absolute;
+	top:45vh;
+	font-size: 2em;
+	left:-150%;
 }
 
 .column {
@@ -166,19 +174,23 @@ header {
 }
 
 .question {
-	position: fixed;
+	/* position: fixed; */
+	position:absolute;
 	display: flex;
 	align-items: center;
-	top: 30vh;
-	left: 60px;
-	width: 70%;
-	max-width: 850px;
+	top:0;
+	bottom: 0;
+	left:-800px;
+	width: 750px;
+	z-index: 999;
 }
 .question #colon {
 	padding-top: 20px;
 	font-size: 14em;
 }
-.question .question-line {}
+.question .question-line {
+	width: 100%;
+}
 
 .question .question-line .inner {
 	border: 2px solid black;
@@ -221,6 +233,7 @@ header {
 .swiper .swiper-wrapper .swiper-slide {
 	display: flex;
 	align-items: center;
+	box-sizing: border-box;
 	padding: 0 20px;
 }
 
